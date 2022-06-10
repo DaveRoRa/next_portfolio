@@ -1,22 +1,15 @@
-import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Box,
   Container,
   Flex,
   Heading,
-  Menu,
-  MenuButton,
   Stack,
-  useColorModeValue,
-  IconButton,
-  MenuList,
-  MenuItem,
-  Link
+  useColorModeValue
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
 import Logo from '../logo';
 import LinkItem from './LinkItem';
 import ThemeToggleButton from './ThemeToggleButton';
+import MenuNav from './MenuNav';
 
 const NavBar = ({ path, ...rest }) => {
   return (
@@ -57,27 +50,7 @@ const NavBar = ({ path, ...rest }) => {
 
         <Box flex={1} align='right'>
           <ThemeToggleButton />
-          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                icon={<HamburgerIcon />}
-                variant='outline'
-                aria-label='Options'
-              />
-              <MenuList>
-                <NextLink href='/' passHref>
-                  <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href='/works' passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
-                </NextLink>
-                <NextLink href='/Posts' passHref>
-                  <MenuItem as={Link}>Posts</MenuItem>
-                </NextLink>
-              </MenuList>
-            </Menu>
-          </Box>
+          <MenuNav />
         </Box>
       </Container>
     </Box>

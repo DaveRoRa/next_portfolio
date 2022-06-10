@@ -1,10 +1,8 @@
 import { memo } from 'react';
 import { Container, Box, Heading } from '@chakra-ui/react';
-import theme from '../libs/theme';
+import ProfilePic from '../components/ProfilePic';
 
 function Main() {
-  console.log('theme', theme);
-
   return (
     <Container>
       <Box borderRadius='lg' bg='red' mb={6} p={3} alignItems='center'>
@@ -17,6 +15,7 @@ function Main() {
           </Heading>
           <p>Descripción &quot;artística&quot;</p>
         </Box>
+        <ProfilePic />
       </Box>
     </Container>
   );
