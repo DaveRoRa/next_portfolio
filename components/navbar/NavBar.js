@@ -14,9 +14,9 @@ import {
   Link
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-
 import Logo from '../logo';
 import LinkItem from './LinkItem';
+import ThemeToggleButton from './ThemeToggleButton';
 
 const NavBar = ({ path, ...rest }) => {
   return (
@@ -54,7 +54,9 @@ const NavBar = ({ path, ...rest }) => {
             Posts
           </LinkItem>
         </Stack>
+
         <Box flex={1} align='right'>
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
