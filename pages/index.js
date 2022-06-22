@@ -4,7 +4,7 @@ import ProfilePic from '../components/ProfilePic';
 import Section, { Paragraph } from '../components/Section';
 import BioSection from '../components/BioSection';
 
-function Main() {
+function MainPage() {
   return (
     <Container>
       <Box borderRadius='lg' bg='red' mb={6} p={3} alignItems='center'>
@@ -35,4 +35,4 @@ function Main() {
   );
 }
 
-export default memo(Main);
+export default memo(MainPage);
