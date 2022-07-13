@@ -6,7 +6,7 @@ import {
   Stack,
   useColorModeValue
 } from '@chakra-ui/react';
-import Logo from '../logo';
+import Logo from '../Logo';
 import LinkItem from './LinkItem';
 import ThemeToggleButton from './ThemeToggleButton';
 import MenuNav from './MenuNav';
