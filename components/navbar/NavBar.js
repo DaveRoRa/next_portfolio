@@ -10,8 +10,12 @@ import Logo from '../Logo';
 import LinkItem from './LinkItem';
 import ThemeToggleButton from './ThemeToggleButton';
 import MenuNav from './MenuNav';
+import LanguageMenu from './LanguageMenu';
+import useLocale from '../../hooks/useLocale';
 
 const NavBar = ({ path, ...rest }) => {
+  const t = useLocale();
+
   return (
     <Box
       position={'fixed'}
@@ -40,8 +44,8 @@ const NavBar = ({ path, ...rest }) => {
           alignItems='center'
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}>
-          <LinkItem href='/works' path={path}>
-            Works
+          <LinkItem href='/trajectory' path={path}>
+            {t.trajectory}
           </LinkItem>
           <LinkItem href='/posts' path={path}>
             Posts
@@ -50,6 +54,7 @@ const NavBar = ({ path, ...rest }) => {
 
         <Box flex={1} align='right'>
           <ThemeToggleButton />
+          <LanguageMenu />
           <MenuNav />
         </Box>
       </Container>
