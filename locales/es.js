@@ -82,7 +82,10 @@ const es = {
       Generación de vistas, formularios y tablas de backoffice basadas en{' '}
       <ExternalLink href='https://handlebarsjs.com/'>Handlebars (hbs)</ExternalLink>{' '}
     </>
-  )
+  ),
+  notFound: 'No encontrada',
+  pageNotFound: 'Al parecer la página que busca no existe',
+  backHome: 'Regresar a Inicio'
 };
 
 export default es;

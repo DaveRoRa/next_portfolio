@@ -81,7 +81,10 @@ const en = {
       Generation of views, forms and backoffice tables based on{' '}
       <ExternalLink href='https://handlebarsjs.com/'>Handlebars (hbs)</ExternalLink>{' '}
     </>
-  )
+  ),
+  notFound: 'Not Found',
+  pageNotFound: 'It seems the page you\'re looking for doesn\' exist',
+  backHome: 'Back to Home'
 };
 
 export default en;
