@@ -1,30 +1,36 @@
-import { Container, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import Article from '../components/layout/Article';
-import Section from '../components/Section';
-import { GridItem } from '../components/GridItem';
+import useLocale from '../hooks/useLocale';
 
-const SkillsPage = () => (
-  <Article title='Posts'>
-    <Container>
-      <Heading as='h3' fontSize={20} mb={4}>
-        Popular Posts
-      </Heading>
-      <Section delay={0.1}>
-        <SimpleGrid columns={[1, 2, 2]} gap={6}>
-          <GridItem
-            title='My fish'
-            thumbnail={'/images/pokemon-scarlet-violet-pawmi.webp'}
-            href='https://www.google.com'
-          />
-          <GridItem
-            title='My fish'
-            thumbnail={'/images/pokemon-scarlet-violet-pawmi.webp'}
-            href='https://www.google.com'
-          />
-        </SimpleGrid>
-      </Section>
-    </Container>
-  </Article>
-);
+const techMasteredList = [
+  'HTML, JavaScript y CSS en sus últimas versiones',
+  'Liberías usadas en la generación de páginas estáticas como JQuery y HandleBars',
+  'React (incluyendo hooks y programación funcional)',
+  'Liberías de componentes como Material Ui, Grommet, Reactstrap y Chakra UI',
+  'Librerías de estilo como Tailwind Css y Styled-Components',
+  'Comunicación con APIs basada tanto en arquitectura REST como GraphQL',
+  'Manejo de estado global con Redux'
+];
+
+const techBasicList = ['NextJS', 'Express', 'Strapi'];
+
+const plusList = [
+  'Dominio Flujo de Trabajo Git',
+  'Inglés comunicacional fluido',
+  'Alta empatía y trabajo en equipo',
+  'Amante de la reutilización y limpieza de código',
+  'Conocimientos en programación de Lenguaje Ensamblador',
+  'Programación en Arduino'
+];
+
+const SkillsPage = () => {
+  const t = useLocale();
+
+  return (
+    <Article title={t.skills}>
+      <Container></Container>
+    </Article>
+  );
+};
 
 export default SkillsPage;

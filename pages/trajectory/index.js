@@ -12,7 +12,7 @@ const TrajectoryPage = () => {
   const t = useLocale();
 
   return (
-    <Article>
+    <Article title={t.trajectory}>
       <Container>
         <Heading as='h3' align='center' fontSize={20} mb={4}>
           {t.workHistory}

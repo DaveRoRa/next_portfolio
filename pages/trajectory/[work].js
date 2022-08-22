@@ -46,11 +46,15 @@ const WorkPage = ({ workId }) => {
     <Article title={work_info[workId].title}>
       <Container>
         <Title>{work_info[workId].title}</Title>
-        <Text fontSize='lg' mb={2} fontWeight='semibold'>
-          {t.workedAs}
-          <Badge fontSize={13}>{work_info[workId].sub}</Badge>:
-        </Text>
-        <IconList list={work_info[workId].list} />
+        <IconList
+          header={
+            <>
+              {t.workedAs}
+              <Badge fontSize={13}>{work_info[workId].sub}</Badge>:
+            </>
+          }
+          list={work_info[workId].list}
+        />
         <WorkImage alt={work_info[workId].title} src={work_info[workId].image} />
       </Container>
     </Article>
