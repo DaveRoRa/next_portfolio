@@ -85,7 +85,9 @@ const es = {
   ),
   notFound: 'No encontrada',
   pageNotFound: 'Al parecer la página que busca no existe',
-  backHome: 'Regresar a Inicio'
+  backHome: 'Regresar a Inicio',
+  skills: 'Habilidades',
+  aboutMe: 'Acerca de mí'
 };
 
 export default es;

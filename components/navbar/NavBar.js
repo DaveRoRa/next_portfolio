@@ -47,8 +47,8 @@ const NavBar = ({ path, ...rest }) => {
           <LinkItem href='/trajectory' path={path}>
             {t.trajectory}
           </LinkItem>
-          <LinkItem href='/posts' path={path}>
-            Posts
+          <LinkItem href='/skills' path={path}>
+            {t.skills}
           </LinkItem>
         </Stack>
 

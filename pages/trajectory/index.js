@@ -8,7 +8,7 @@ export const cubaCelThumb = '/images/CubaCelebrity_Logo.png';
 export const mariloginsaThumb = '/images/MariloginsaTM_Logo.png';
 export const ceibalThumb = '/images/PlanCeibal_Logo.png';
 
-const WorksPage = () => {
+const TrajectoryPage = () => {
   const t = useLocale();
 
   return (
@@ -56,4 +56,4 @@ const WorksPage = () => {
   );
 };
 
-export default WorksPage;
+export default TrajectoryPage;

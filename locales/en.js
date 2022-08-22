@@ -54,8 +54,9 @@ const en = {
     <>
       Design of a complete CRUD business management system based on{' '}
       <ExternalLink href='https://reactjs.org/'>React</ExternalLink> with{' '}
-      <ExternalLink href='https://getbootstrap.com/'>Bootstrap</ExternalLink> styles and
-      <ExternalLink href='https://reactstrap.github.io/'>Reactstrap</ExternalLink>.
+      <ExternalLink href='https://getbootstrap.com/'>Bootstrap</ExternalLink>
+      {' '}styles and{' '}
+      <ExternalLink href='https://reactstrap.github.io/'>Reactstrap</ExternalLink>
       components.
     </>
   ),
@@ -83,8 +84,10 @@ const en = {
     </>
   ),
   notFound: 'Not Found',
-  pageNotFound: 'It seems the page you\'re looking for doesn\' exist',
-  backHome: 'Back to Home'
+  pageNotFound: 'It seems the page you\'re looking for doesn\'t exist',
+  backHome: 'Back to Home',
+  skills: 'Skills',
+  aboutMe: 'About me'
 };
 
 export default en;

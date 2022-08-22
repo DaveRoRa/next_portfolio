@@ -3,7 +3,7 @@ import Article from '../components/layout/Article';
 import Section from '../components/Section';
 import { GridItem } from '../components/GridItem';
 
-const Posts = () => (
+const SkillsPage = () => (
   <Article title='Posts'>
     <Container>
       <Heading as='h3' fontSize={20} mb={4}>
@@ -27,4 +27,4 @@ const Posts = () => (
   </Article>
 );
 
-export default Posts;
+export default SkillsPage;

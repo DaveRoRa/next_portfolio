@@ -57,26 +57,19 @@ const WorkPage = ({ workId }) => {
   );
 };
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
+  const works_array = ['mariloginsa', 'ceibal_plan', 'cuba_celebrity'];
+  const paths = locales.flatMap((locale) =>
+    works_array.map((work) => ({
+      params: {
+        work
+      },
+      locale
+    }))
+  );
   return {
     fallback: false,
-    paths: [
-      {
-        params: {
-          work: 'mariloginsa'
-        }
-      },
-      {
-        params: {
-          work: 'ceibal_plan'
-        }
-      },
-      {
-        params: {
-          work: 'cuba_celebrity'
-        }
-      }
-    ]
+    paths
   };
 }
 
