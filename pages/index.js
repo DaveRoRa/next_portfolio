@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import { Container, Box, Heading } from '@chakra-ui/react';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../hooks/useTranslation';
 import ProfilePic from '../components/ProfilePic';
 import Section, { Paragraph } from '../components/Section';
 import BioSection from '../components/BioSection';

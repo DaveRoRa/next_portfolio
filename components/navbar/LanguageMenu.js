@@ -11,7 +11,7 @@ import {
   useBreakpointValue
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../../hooks/useTranslation';
 import { TbLanguage } from 'react-icons/tb';
 
 const LanguageMenu = () => {

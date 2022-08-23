@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import { Box, Heading, Container, Text, Divider, Button } from '@chakra-ui/react';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../hooks/useTranslation';
 
 const NotFound = () => {
   const { t } = useTranslation('404');

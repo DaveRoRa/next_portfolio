@@ -9,7 +9,7 @@ import {
   Link
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../../hooks/useTranslation';
 
 const MenuNav = () => {
   const { t } = useTranslation('common');

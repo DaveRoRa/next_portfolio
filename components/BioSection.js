@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../hooks/useTranslation';
 
 const BioDescription = styled(Box)`
   padding-left: 3.4em;

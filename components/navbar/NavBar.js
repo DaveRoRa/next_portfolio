@@ -6,7 +6,7 @@ import {
   Stack,
   useColorModeValue
 } from '@chakra-ui/react';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../../hooks/useTranslation';
 import Logo from '../Logo';
 import LinkItem from './LinkItem';
 import ThemeToggleButton from './ThemeToggleButton';

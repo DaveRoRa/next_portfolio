@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import { Box, Heading, Image, Link, Badge } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../hooks/useTranslation';
 
 export const Title = ({ children }) => {
   const { t } = useTranslation('common');

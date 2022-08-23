@@ -1,5 +1,5 @@
 import { Badge, Container } from '@chakra-ui/react';
-import useTranslation from 'next-translate/useTranslation';
+import useTranslation from '../../hooks/useTranslation';
 import Trans from 'next-translate/Trans';
 import { Title, WorkImage } from '../../components/Work';
 import Article from '../../components/layout/Article';
