@@ -1,3 +1,4 @@
+import { Box, useColorModeValue } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { GridItemStyle } from '../GridItem';
@@ -22,7 +23,13 @@ const Article = ({ children, title }) => (
           <title>{title} - David Rodriguez Ramirez</title>
         </Head>
       )}
-      {children}
+      <Box
+        boxShadow={useColorModeValue('2xl','dark-2xl')}
+        p='6'
+        rounded='md'
+        bg={useColorModeValue('white', 'blackAlpha.900')}>
+        {children}
+      </Box>
       <GridItemStyle />
     </>
   </motion.article>

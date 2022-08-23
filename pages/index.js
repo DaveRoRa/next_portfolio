@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Container, Box, Heading } from '@chakra-ui/react';
+import { Container, Box, Heading, useColorModeValue } from '@chakra-ui/react';
 import useTranslation from '../hooks/useTranslation';
 import ProfilePic from '../components/ProfilePic';
 import Section, { Paragraph } from '../components/Section';
@@ -12,7 +12,13 @@ function MainPage() {
   return (
     <Article>
       <Container>
-        <Box borderRadius='lg' bg='whiteAlpha.200' mb={6} p={3} alignItems='center'>
+        <Box
+          borderRadius='lg'
+          bg={useColorModeValue('blue.700', 'gray.900')}
+          color={'white'}
+          mb={6}
+          p={3}
+          alignItems='center'>
           {t('introduction')}
         </Box>
         <Box display={{ md: 'flex' }}>

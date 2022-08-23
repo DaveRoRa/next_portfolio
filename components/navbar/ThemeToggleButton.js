@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const ThemeToggleButton = () => {
   const { toggleColorMode } = useColorMode();
-  const colorScheme = useColorModeValue('purple', 'orange');
+  const colorScheme = useColorModeValue('facebook', 'whiteScales');
   const icon = useColorModeValue(<MoonIcon />, <SunIcon />);
   return (
     <AnimatePresence exitBeforeEnter initial={false}>

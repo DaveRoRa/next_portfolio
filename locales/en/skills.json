@@ -1,0 +1,19 @@
+{
+  "masteredTechs": "Experience in:",
+  "mastered1": "HTML, JavaScript and CSS in their latest versions.",
+  "mastered2": "Libraries used in static web pages generation like <l1>JQuery</l1> y <l2>HandleBars</l2>.",
+  "mastered3": "<l1>React</l1> (including Hooks y Functional Programming).",
+  "mastered4": "Components libraries such as <l1>Material Ui</l1>, <l2>Grommet</l2>, <l3>Reactstrap</l3> and <l4>Chakra UI</l4>.",
+  "mastered5": "Styles libraries including <l1>Tailwind Css</l1>, <l2>Styled-Components</l2> and <l3>Emotion Styled</l3>.",
+  "mastered6": "Communication with APIs based on both REST and <l1>GraphQL</l1> architecture.",
+  "mastered7": "Global state management with <l1>Redux</l1>.",
+  "basicKnoledge": "Basic knowledge of:",
+  "plus": "Extras:",
+  "plus1": "Git Workflow Mastery.",
+  "plus2": "Knoledge of <l1>Eslint</l1> and <l2>Prettier</l2>.",
+  "plus3": "Fluent communicational English.",
+  "plus4": "High empathy and teamwork.",
+  "plus5": "Lover of code reuse and cleanliness.",
+  "plus6": "Knowledge of Assembly Language.",
+  "plus7": "Programming in Arduino."
+}

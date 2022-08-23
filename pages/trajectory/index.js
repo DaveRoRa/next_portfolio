@@ -1,4 +1,10 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react';
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Divider,
+  useColorModeValue
+} from '@chakra-ui/react';
 import useTranslation from '../../hooks/useTranslation';
 import { WorkGridItem } from '../../components/GridItem';
 import Section from '../../components/Section';
@@ -36,7 +42,11 @@ const TrajectoryPage = () => {
           </Section>
         </SimpleGrid>
         <Section delay={0.4}>
-          <Divider my={6} />
+          <Divider
+            opacity={1}
+            my={6}
+            borderColor={useColorModeValue('blue.500', 'whiteAlpha.700')}
+          />
           <Heading as='h3' align='center' fontSize={20} mb={4}>
             {t('oldWorks')}
           </Heading>

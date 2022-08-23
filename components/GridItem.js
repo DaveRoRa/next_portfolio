@@ -1,6 +1,6 @@
 import NextLink from 'next/link';
 import Image from 'next/image';
-import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react';
+import { Box, Text, LinkBox, LinkOverlay, useColorModeValue } from '@chakra-ui/react';
 import { Global } from '@emotion/react';
 
 export const GridItem = ({ children, href, title, thumbnail }) => (
@@ -24,7 +24,18 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 );
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w='100%' align='center'>
+  <Box
+    _hover={{
+      boxShadow: useColorModeValue('2xl', 'dark-2xl'),
+      border: '2px solid',
+      borderColor: useColorModeValue('pink.600', 'whiteAlpha.800'),
+    }}
+    w='100%'
+    p={4}
+    height='100%'
+    boxShadow={useColorModeValue('lg', 'dark-lg')}
+    borderRadius={10}
+    align='center'>
     <NextLink href={`/trajectory/${id}`} passHref>
       <LinkBox cursor='pointer'>
         <Image
@@ -37,7 +48,7 @@ export const WorkGridItem = ({ children, id, title, thumbnail }) => (
           blurDataURL='/images/image-blur-placeholder.png'
         />
         <LinkOverlay href={`/trajectory/${id}`}>
-          <Text mt={2} fontSize={20}>
+          <Text fontWeight={500} mt={2} fontSize={20}>
             {title}
           </Text>
         </LinkOverlay>

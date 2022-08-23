@@ -1,14 +1,25 @@
 import NextLink from 'next/link';
-import { Box, Heading, Image, Link, Badge } from '@chakra-ui/react';
+import { Box, Heading, Image, Link, Badge, useColorModeValue } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import useTranslation from '../hooks/useTranslation';
 
 export const Title = ({ children }) => {
   const { t } = useTranslation('common');
+  const isDark = useColorModeValue(false, true);
+
   return (
     <Box>
       <NextLink href='/trajectory' passHref>
-        <Link>{t('trajectory')}</Link>
+        <Link
+          fontSize={20}
+          textShadow={
+            isDark &&
+            '-1px 0 1px white, 0 1px 1px white, 1px 0 1px white, 0 -1px 1px white'
+          }
+          fontWeight={500}
+          color={isDark ? 'black' : 'pink.700'}>
+          {t('trajectory')}
+        </Link>
       </NextLink>
       <span>
         &nbsp;

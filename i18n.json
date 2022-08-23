@@ -6,6 +6,7 @@
     "/": ["home"],
     "/trajectory":["trajectory"],
     "/trajectory/[work]":["[work]"],
+    "/skills":["skills"],
     "/404": ["404"]
   }
 }

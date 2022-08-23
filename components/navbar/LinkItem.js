@@ -3,13 +3,22 @@ import { Link, useColorModeValue } from '@chakra-ui/react';
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
+  const hoverBg = useColorModeValue('pink.600', 'whiteAlpha.900');
+  const hoverColor = useColorModeValue('white', 'black');
+  const color = useColorModeValue('pink.700', 'white');
   return (
     <NextLink href={href} passHref>
       <Link
+        _hover={
+          !active && {
+            bg: hoverBg,
+            color: hoverColor
+          }
+        }
         p={2}
-        bg={active ? 'glassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}>
+        border={active && '2px solid'}
+        color={color}
+        borderRadius={10}>
         {children}
       </Link>
     </NextLink>

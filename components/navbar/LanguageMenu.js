@@ -8,11 +8,34 @@ import {
   MenuItem,
   Button,
   Icon,
-  useBreakpointValue
+  useBreakpointValue,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import useTranslation from '../../hooks/useTranslation';
 import { TbLanguage } from 'react-icons/tb';
+
+const LanguageItem = ({ value, changeLanguage, current, children }) => {
+  const isCurrent = current === value;
+  const color = useColorModeValue('pink.600', 'white');
+  const hoverColor = useColorModeValue('white', 'blackAlpha.900');
+  return (
+    <MenuItem
+      border={isCurrent && '2px solid'}
+      borderRadius={10}
+      _hover={
+        !isCurrent && {
+          bg: color,
+          color: hoverColor
+        }
+      }
+      color={color}
+      onClick={changeLanguage}
+      value={value}>
+      {children}
+    </MenuItem>
+  );
+};
 
 const LanguageMenu = () => {
   const router = useRouter();
@@ -48,13 +71,19 @@ const LanguageMenu = () => {
     <Box ml={2} display={{ base: 'inline-block' }}>
       <Menu>
         {menuButton}
-        <MenuList>
-          <MenuItem onClick={changeLanguage} value='es'>
+        <MenuList bg={useColorModeValue('white', 'blackAlpa.100')} >
+          <LanguageItem
+            changeLanguage={changeLanguage}
+            current={router.locale}
+            value='es'>
             Español
-          </MenuItem>
-          <MenuItem onClick={changeLanguage} value='en'>
+          </LanguageItem>
+          <LanguageItem
+            changeLanguage={changeLanguage}
+            current={router.locale}
+            value='en'>
             English
-          </MenuItem>
+          </LanguageItem>
         </MenuList>
       </Menu>
     </Box>

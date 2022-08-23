@@ -21,9 +21,12 @@ const NavBar = ({ path, ...rest }) => {
       position={'fixed'}
       as='nav'
       w='100%'
-      bg={useColorModeValue('#ffffff40', '#20202380')}
-      style={{ backdropFilter: 'blur(10px)' }}
+      bg={useColorModeValue('white', 'blackAlpa.100')}
+      style={{ backdropFilter: 'blur(4px)' }}
       zIndex={1}
+      color='pink.800'
+      fontWeight={500}
+      boxShadow={useColorModeValue('lg', 'dark-lg')}
       {...rest}>
       <Container
         display={'flex'}
@@ -51,8 +54,13 @@ const NavBar = ({ path, ...rest }) => {
             {t('skills')}
           </LinkItem>
         </Stack>
-
-        <Box flex={1} align='right'>
+        <Box
+          align='right'
+          display='flex'
+          flexDirection='row'
+          alignContent='flex-end'
+          alignItems='flex-end'
+          alignSelf='flex-end'>
           <ThemeToggleButton />
           <LanguageMenu />
           <MenuNav />

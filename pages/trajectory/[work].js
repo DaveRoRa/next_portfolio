@@ -1,4 +1,4 @@
-import { Badge, Container } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import useTranslation from '../../hooks/useTranslation';
 import Trans from 'next-translate/Trans';
 import { Title, WorkImage } from '../../components/Work';
@@ -111,7 +111,7 @@ const WorkPage = ({ workId }) => {
           header={
             <>
               {t('workedAs')}
-              <Badge fontSize={13}>{work_info[workId].sub}</Badge>:
+              {work_info[workId].sub}:
             </>
           }
           list={work_info[workId].list}
