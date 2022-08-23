@@ -1,42 +1,103 @@
-import { Badge, Container, Text } from '@chakra-ui/react';
+import { Badge, Container } from '@chakra-ui/react';
+import useTranslation from 'next-translate/useTranslation';
+import Trans from 'next-translate/Trans';
 import { Title, WorkImage } from '../../components/Work';
 import Article from '../../components/layout/Article';
-import useLocale from '../../hooks/useLocale';
 import { useMemo } from 'react';
 import { cubaCelThumb, mariloginsaThumb, ceibalThumb } from '../trajectory';
 import IconList from '../../components/IconList';
+import ExternalLink from '../../components/ExternalLink';
 
 const WorkPage = ({ workId }) => {
-  const t = useLocale();
+  const { t } = useTranslation('[work]');
 
   const work_info = useMemo(
     () => ({
       cuba_celebrity: {
         title: 'Cuba Celebrity',
-        sub: t.cubaCelebritySub,
+        sub: t('cubaCelebritySub'),
         image: cubaCelThumb,
         list: [
-          t.cubaCelebrityListElement1,
-          t.cubaCelebrityListElement2,
-          t.cubaCelebrityListElement3
+          <Trans
+            key='cc1'
+            i18nKey='[work]:cubaCelebrityListElement1'
+            components={{
+              l1: <ExternalLink href='https://qvapay.com' />,
+              l2: <ExternalLink href='https://www.paypal.com/' />,
+              l3: <ExternalLink href='https://mailchimp.com/' />
+            }}
+          />,
+          <Trans
+            key='cc2'
+            i18nKey='[work]:cubaCelebrityListElement2'
+            components={{
+              l1: <ExternalLink href='https://reactjs.org/' />,
+              l2: <ExternalLink href='https://v2.grommet.io/' />
+            }}
+          />,
+          <Trans
+            key='cc3'
+            i18nKey='[work]:cubaCelebrityListElement3'
+            components={{
+              l1: <ExternalLink href='https://strapi.io/' />,
+              l2: <ExternalLink href='https://graphql.org/' />
+            }}
+          />
         ]
       },
       mariloginsa: {
         title: 'Mariloginsa TM',
-        sub: t.frontEndDeveloper,
+        sub: t('frontEndDeveloper'),
         image: mariloginsaThumb,
         list: [
-          t.mariloginsaListElement1,
-          t.mariloginsaListElement2,
-          t.mariloginsaListElement3,
-          t.mariloginsaListElement4
+          <Trans
+            key='m1'
+            i18nKey='[work]:mariloginsaListElement1'
+            components={{
+              l1: <ExternalLink href='https://reactjs.org/' />,
+              l2: <ExternalLink href='https://getbootstrap.com/' />,
+              l3: <ExternalLink href='https://reactstrap.github.io/' />
+            }}
+          />,
+          <Trans
+            key='m2'
+            i18nKey='[work]:mariloginsaListElement2'
+            components={{
+              l1: <ExternalLink href='https://redux.js.org/' />
+            }}
+          />,
+          t('mariloginsaListElement3'),
+          t('mariloginsaListElement4')
         ]
       },
       ceibal_plan: {
-        title: t.ceibalPlan,
-        sub: t.frontEndDeveloper,
+        title: t('ceibalPlan'),
+        sub: t('frontEndDeveloper'),
         image: ceibalThumb,
-        list: [t.ceibalListElement1, t.ceibalListElement2]
+        list: [
+          <Trans
+            key='cp1'
+            i18nKey='[work]:ceibalListElement1'
+            components={{
+              l1: <ExternalLink href='https://reactjs.org/' />,
+              l2: <ExternalLink href='https://mui.com/' />
+            }}
+          />,
+          <Trans
+            key='cp2'
+            i18nKey='[work]:ceibalListElement2'
+            components={{
+              l1: <ExternalLink href='https://handlebarsjs.com/' />
+            }}
+          />,
+          <Trans
+            key='cp3'
+            i18nKey='[work]:mariloginsaListElement2'
+            components={{
+              l1: <ExternalLink href='https://redux.js.org/' />
+            }}
+          />
+        ]
       }
     }),
     [t]
@@ -49,7 +110,7 @@ const WorkPage = ({ workId }) => {
         <IconList
           header={
             <>
-              {t.workedAs}
+              {t('workedAs')}
               <Badge fontSize={13}>{work_info[workId].sub}</Badge>:
             </>
           }

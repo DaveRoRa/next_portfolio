@@ -1,6 +1,5 @@
 import { Container } from '@chakra-ui/react';
 import Article from '../components/layout/Article';
-import useLocale from '../hooks/useLocale';
 
 const techMasteredList = [
   'HTML, JavaScript y CSS en sus últimas versiones',
@@ -16,6 +15,7 @@ const techBasicList = ['NextJS', 'Express', 'Strapi'];
 
 const plusList = [
   'Dominio Flujo de Trabajo Git',
+  'Conocimientos en Eslint y Prettier',
   'Inglés comunicacional fluido',
   'Alta empatía y trabajo en equipo',
   'Amante de la reutilización y limpieza de código',
@@ -24,10 +24,9 @@ const plusList = [
 ];
 
 const SkillsPage = () => {
-  const t = useLocale();
 
   return (
-    <Article title={t.skills}>
+    <Article>
       <Container></Container>
     </Article>
   );

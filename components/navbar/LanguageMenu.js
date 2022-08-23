@@ -11,12 +11,12 @@ import {
   useBreakpointValue
 } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
-import useLocale from '../../hooks/useLocale';
+import useTranslation from 'next-translate/useTranslation';
 import { TbLanguage } from 'react-icons/tb';
 
 const LanguageMenu = () => {
   const router = useRouter();
-  const t = useLocale();
+  const { t } = useTranslation('common');
 
   const changeLanguage = (e) => {
     const locale = e.target.value;
@@ -29,17 +29,17 @@ const LanguageMenu = () => {
         as={IconButton}
         icon={<Icon as={TbLanguage} />}
         variant='outline'
-        aria-label={t.language}
+        aria-label={t('language')}
       />
     ),
     md: (
       <MenuButton
         as={Button}
         variant='outline'
-        aria-label={t.language}
+        aria-label={t('language')}
         leftIcon={<Icon as={TbLanguage} />}
         rightIcon={<ChevronDownIcon />}>
-        {t.language}
+        {t('language')}
       </MenuButton>
     )
   });

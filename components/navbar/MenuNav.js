@@ -9,10 +9,10 @@ import {
   Link
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
-import useLocale from '../../hooks/useLocale';
+import useTranslation from 'next-translate/useTranslation';
 
 const MenuNav = () => {
-  const t = useLocale();
+  const { t } = useTranslation('common');
 
   return (
     <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
@@ -25,13 +25,13 @@ const MenuNav = () => {
         />
         <MenuList>
           <NextLink href='/' passHref>
-            <MenuItem as={Link}>{t.aboutMe}</MenuItem>
+            <MenuItem as={Link}>{t('aboutMe')}</MenuItem>
           </NextLink>
           <NextLink href='/trajectory' passHref>
-            <MenuItem as={Link}>{t.trajectory}</MenuItem>
+            <MenuItem as={Link}>{t('trajectory')}</MenuItem>
           </NextLink>
           <NextLink href='/skills' passHref>
-            <MenuItem as={Link}>{t.skills}</MenuItem>
+            <MenuItem as={Link}>{t('skills')}</MenuItem>
           </NextLink>
         </MenuList>
       </Menu>

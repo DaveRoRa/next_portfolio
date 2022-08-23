@@ -6,15 +6,15 @@ import {
   Stack,
   useColorModeValue
 } from '@chakra-ui/react';
+import useTranslation from 'next-translate/useTranslation';
 import Logo from '../Logo';
 import LinkItem from './LinkItem';
 import ThemeToggleButton from './ThemeToggleButton';
 import MenuNav from './MenuNav';
 import LanguageMenu from './LanguageMenu';
-import useLocale from '../../hooks/useLocale';
 
 const NavBar = ({ path, ...rest }) => {
-  const t = useLocale();
+  const { t } = useTranslation('common');
 
   return (
     <Box
@@ -45,10 +45,10 @@ const NavBar = ({ path, ...rest }) => {
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}>
           <LinkItem href='/trajectory' path={path}>
-            {t.trajectory}
+            {t('trajectory')}
           </LinkItem>
           <LinkItem href='/skills' path={path}>
-            {t.skills}
+            {t('skills')}
           </LinkItem>
         </Stack>
 

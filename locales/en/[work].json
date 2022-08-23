@@ -1,0 +1,15 @@
+{
+  "workedAs": "Worked as a ",
+  "cubaCelebritySub": "Full Stack Web Developer",
+  "cubaCelebrityListElement1": "Connection with payment and notification systems through third-party platforms and APIs such as <l1>QvaPay</l1>, <l2>PayPal</l2>, y <l3>Mailchimp</l3>.",
+  "cubaCelebrityListElement2": "Design of specialized and generic <l1>React</l1> components based on <l2>Grommet</l2>.",
+  "cubaCelebrityListElement3": "Communication with backend resources using the headless CMS <l1>Strapi</l1> y <l2>GraphQL</l2>.",
+  "frontEndDeveloper": "Front End Developer",
+  "mariloginsaListElement1": "Design of a complete CRUD business management system based on <l1>React</l1> with <l2>Bootstrap</l2> styles and <l3>Reactstrap</l3> components.",
+  "mariloginsaListElement2": "Global state management with <l1>Redux</l1>.",
+  "mariloginsaListElement3": "Security validations, permissions and communication with API based on REST.",
+  "mariloginsaListElement4": "Work with interactive tables and dynamic forms.",
+  "ceibalPlan": "Ceibal Project",
+  "ceibalListElement1": "Building and maintaining <l1>React</l1> components based on <l2>Material UI</l2>.",
+  "ceibalListElement2": "Generation of views, forms and backoffice tables based on <l1>Handlebars (hbs)</l1>."
+}

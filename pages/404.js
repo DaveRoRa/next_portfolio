@@ -1,19 +1,19 @@
 import NextLink from 'next/link';
 import { Box, Heading, Container, Text, Divider, Button } from '@chakra-ui/react';
-import useLocale from '../hooks/useLocale';
+import useTranslation from 'next-translate/useTranslation';
 
 const NotFound = () => {
-  const t = useLocale();
+  const { t } = useTranslation('404');
 
   return (
     <Container>
-      <Heading as='h1'>{t.notFound}</Heading>
-      <Text>{t.pageNotFound}</Text>
+      <Heading as='h1'>{t('notFound')}</Heading>
+      <Text>{t('pageNotFound')}</Text>
       <Divider my={6} />
 
       <Box my={6} align='center'>
         <NextLink href='/' passHref>
-          <Button colorScheme='teal'>{t.backHome}</Button>
+          <Button colorScheme='teal'>{t('backHome')}</Button>
         </NextLink>
       </Box>
     </Container>
