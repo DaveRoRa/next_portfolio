@@ -1,15 +1,20 @@
 {
-  "workedAs": "Trabajé como ",
-  "cubaCelebritySub": "Desarrollador Web Full Stack",
+  "cubaCelebritySub": "Puesto de Desarrollador Web Full Stack",
   "cubaCelebrityListElement1": "Conexión con sistemas de pagos y notificación a través de plataformas y APIs de terceros como <l1>QvaPay</l1>, <l2>PayPal</l2>, y <l3>Mailchimp</l3>.",
   "cubaCelebrityListElement2": "Diseño de componentes de <l1>React</l1> especializados y genéricos basados en <l2>Grommet</l2>.",
   "cubaCelebrityListElement3": "Comunicación con recursos del backend utilizando el CMS headless <l1>Strapi</l1> y <l2>GraphQL</l2>.",
-  "frontEndDeveloper": "Desarrollador Front End",
+  "frontEndDeveloper": "Puesto de Desarrollador Front End",
   "mariloginsaListElement1": "Diseño de un sistema CRUD completo de gestión empresarial basado en <l1>React</l1> con estilos en <l2>Bootstrap</l2> y componentes de <l3>Reactstrap</l3>.",
   "mariloginsaListElement2": "Control de estado global con <l1>Redux</l1>.",
   "mariloginsaListElement3": "Validaciones de seguridad, permisos y comunicación con Api basada en REST.",
   "mariloginsaListElement4": "Trabajo con tablas interactivas y formularios dinámicos.",
   "ceibalPlan": "Plan Ceibal",
   "ceibalListElement1": "Creación y mantenimiento de componentes de <l1>React</l1> basados en <l2>Material UI</l2>.",
-  "ceibalListElement2": "Generación de vistas, formularios y tablas de backoffice basadas en <l1>Handlebars (hbs)</l1>."
+  "ceibalListElement2": "Generación de vistas, formularios y tablas de backoffice basadas en <l1>Handlebars (hbs)</l1>.",
+  "collegeTitle": "Ingeniería en Telecomunicaciones y Electrónica en el Instituto Superior Politécnico José Antonio Echeverría",
+  "collegeSub": "Trayectoria de pre-grado",
+  "collegeListElement1": "Estudios en lenguaje C#.",
+  "collegeListElement2": "Dominio de lenguaje ensamblador de los microcontroladores 8086 y 8051.",
+  "collegeListElement3": "Estudio de Java Básico.",
+  "collegeListElement4": "Tesis de graduación de Diseño y Programación de Casa Inteligente para personas con diversidad funcional visual o motora."
 }

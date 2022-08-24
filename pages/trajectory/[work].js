@@ -4,7 +4,7 @@ import Trans from 'next-translate/Trans';
 import { Title, WorkImage } from '../../components/Work';
 import Article from '../../components/layout/Article';
 import { useMemo } from 'react';
-import { cubaCelThumb, mariloginsaThumb, ceibalThumb } from '../trajectory';
+import { cubaCelThumb, mariloginsaThumb, ceibalThumb, collegeThumb } from '../trajectory';
 import IconList from '../../components/IconList';
 import ExternalLink from '../../components/ExternalLink';
 
@@ -98,6 +98,17 @@ const WorkPage = ({ workId }) => {
             }}
           />
         ]
+      },
+      college: {
+        title: t('collegeTitle'),
+        sub: t('collegeSub'),
+        image: collegeThumb,
+        list: [
+          t('collegeListElement1'),
+          t('collegeListElement2'),
+          t('collegeListElement3'),
+          t('collegeListElement4')
+        ]
       }
     }),
     [t]
@@ -107,15 +118,7 @@ const WorkPage = ({ workId }) => {
     <Article title={work_info[workId].title}>
       <Container>
         <Title>{work_info[workId].title}</Title>
-        <IconList
-          header={
-            <>
-              {t('workedAs')}
-              {work_info[workId].sub}:
-            </>
-          }
-          list={work_info[workId].list}
-        />
+        <IconList header={<>{work_info[workId].sub}:</>} list={work_info[workId].list} />
         <WorkImage alt={work_info[workId].title} src={work_info[workId].image} />
       </Container>
     </Article>
@@ -123,7 +126,7 @@ const WorkPage = ({ workId }) => {
 };
 
 export async function getStaticPaths({ locales }) {
-  const works_array = ['mariloginsa', 'ceibal_plan', 'cuba_celebrity'];
+  const works_array = ['mariloginsa', 'ceibal_plan', 'cuba_celebrity', 'college'];
   const paths = locales.flatMap((locale) =>
     works_array.map((work) => ({
       params: {

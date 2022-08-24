@@ -1,10 +1,4 @@
-import {
-  Container,
-  Heading,
-  SimpleGrid,
-  Divider,
-  useColorModeValue
-} from '@chakra-ui/react';
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react';
 import useTranslation from '../../hooks/useTranslation';
 import { WorkGridItem } from '../../components/GridItem';
 import Section from '../../components/Section';
@@ -13,6 +7,7 @@ import Article from '../../components/layout/Article';
 export const cubaCelThumb = '/images/CubaCelebrity_Logo.png';
 export const mariloginsaThumb = '/images/MariloginsaTM_Logo.png';
 export const ceibalThumb = '/images/PlanCeibal_Logo.png';
+export const collegeThumb = '/images/logo-cujae.png';
 
 const TrajectoryPage = () => {
   const { t } = useTranslation('trajectory');
@@ -21,7 +16,7 @@ const TrajectoryPage = () => {
     <Article title={t('trajectory')}>
       <Container>
         <Heading as='h3' align='center' fontSize={20} mb={4}>
-          {t('workHistory')}
+          {t('proHistory')}
         </Heading>
         <SimpleGrid columns={[1, null, null, 2]} gap={6}>
           <Section>
@@ -40,27 +35,23 @@ const TrajectoryPage = () => {
               {t('ceibalThumbDescription')}
             </WorkGridItem>
           </Section>
+          <Section>
+            <WorkGridItem
+              id='cuba_celebrity'
+              title='Cuba Celebrity'
+              thumbnail={cubaCelThumb}>
+              {t('cubaCelebrityThumbDescription')}
+            </WorkGridItem>
+          </Section>
+          <Section>
+            <WorkGridItem
+              id='college'
+              title={t('collegeGraduation')}
+              thumbnail={collegeThumb}>
+              {t('collegeThumbDescription')}
+            </WorkGridItem>
+          </Section>
         </SimpleGrid>
-        <Section delay={0.4}>
-          <Divider
-            opacity={1}
-            my={6}
-            borderColor={useColorModeValue('blue.500', 'whiteAlpha.700')}
-          />
-          <Heading as='h3' align='center' fontSize={20} mb={4}>
-            {t('oldWorks')}
-          </Heading>
-          <SimpleGrid columns={[1, null, null, 2]} gap={6}>
-            <Section>
-              <WorkGridItem
-                id='cuba_celebrity'
-                title='Cuba Celebrity'
-                thumbnail={cubaCelThumb}>
-                {t('cubaCelebrityThumbDescription')}
-              </WorkGridItem>
-            </Section>
-          </SimpleGrid>
-        </Section>
       </Container>
     </Article>
   );
