@@ -22,7 +22,6 @@ const LanguageItem = ({ value, changeLanguage, current, children }) => {
   return (
     <MenuItem
       border={isCurrent && '2px solid'}
-      borderRadius={10}
       _hover={
         !isCurrent && {
           bg: color,
@@ -71,7 +70,7 @@ const LanguageMenu = () => {
     <Box ml={2} display={{ base: 'inline-block' }}>
       <Menu>
         {menuButton}
-        <MenuList bg={useColorModeValue('white', 'blackAlpa.100')} >
+        <MenuList bg={useColorModeValue('white', 'black')}>
           <LanguageItem
             changeLanguage={changeLanguage}
             current={router.locale}

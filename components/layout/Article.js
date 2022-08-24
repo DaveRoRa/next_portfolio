@@ -24,9 +24,11 @@ const Article = ({ children, title }) => (
         </Head>
       )}
       <Box
-        boxShadow={useColorModeValue('2xl','dark-2xl')}
+        boxShadow={useColorModeValue('2xl', 'dark-2xl')}
         p='6'
         rounded='md'
+        backdropFilter='auto'
+        backdropBlur={useColorModeValue(undefined, '4px')}
         bg={useColorModeValue('white', 'blackAlpha.900')}>
         {children}
       </Box>

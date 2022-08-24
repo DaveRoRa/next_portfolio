@@ -11,20 +11,27 @@ const LogoBox = styled.span`
   height: 30px;
   line-height: 20px;
   padding: 10px;
+  
+  img {
+    transition: transform 0.1s ease-in-out;
+  }
 
   &:hover img {
-    transform: rotate(20deg);
+    transform: rotate(90deg);
   }
 `;
-
-const footPrintImg = '/images/code_logo.png';
 
 const Logo = () => {
   return (
     <Link href={'/'}>
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt='logo' />
+          <Image
+            src={useColorModeValue('/images/code_logo.png', '/images/code_logo_dark.png')}
+            width={20}
+            height={20}
+            alt='logo'
+          />
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily='M PLUS Rounded 1c'

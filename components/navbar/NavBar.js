@@ -22,7 +22,7 @@ const NavBar = ({ path, ...rest }) => {
       as='nav'
       w='100%'
       bg={useColorModeValue('white', 'blackAlpa.100')}
-      style={{ backdropFilter: 'blur(4px)' }}
+      backdropFilter={useColorModeValue(undefined, 'blur(4px)')}
       zIndex={1}
       color='pink.800'
       fontWeight={500}
@@ -63,7 +63,7 @@ const NavBar = ({ path, ...rest }) => {
           alignSelf='flex-end'>
           <ThemeToggleButton />
           <LanguageMenu />
-          <MenuNav />
+          <MenuNav path={path} />
         </Box>
       </Container>
     </Box>

@@ -28,16 +28,14 @@ const styles = {
         'url(/images/david-werbrouck-R_FPsOWp2r0-unsplash.jpg)'
       )(props),
       'background-size': 'cover',
-      color: mode('blue.800', 'white')(props)
+      color: mode('blue.800', 'white')(props),
+      'background-color': mode('rgba(1,0,135,1)', 'black')(props)
     },
-    '*:focus': {
+    'a:focus:not(:hover),button:focus:not(:hover)': {
       'box-shadow': `${mode(
         '0 0 0 3px rgba(184, 50, 128, 0.6)',
         '0 0 0 3px rgba(255, 255, 255, 0.6)'
       )(props)} !important`
-    },
-    '*:focus:hover': {
-      'box-shadow': 'none !important'
     }
   })
 };
@@ -51,7 +49,7 @@ const components = {
         textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 4,
-        bg: mode('blue.700', 'gray.900')(props),
+        bg: mode('blue.700', 'whiteAlpha.100')(props),
         padding: 2,
         color: 'white',
         borderRadius: 10
@@ -59,10 +57,9 @@ const components = {
     }
   },
   Link: {
-    baseStyle: (props) => ({
-      color: mode('#3d7aed', '#ff63c3')(props),
+    baseStyle: {
       textUnderLineOffset: 3
-    })
+    }
   },
   MenuList: {
     bg: 'red'

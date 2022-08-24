@@ -14,7 +14,7 @@ function MainPage() {
       <Container>
         <Box
           borderRadius='lg'
-          bg={useColorModeValue('blue.700', 'gray.900')}
+          bg={useColorModeValue('blue.700', 'whiteAlpha.100')}
           color={'white'}
           mb={6}
           p={3}
