@@ -5,8 +5,6 @@ import theme from '../libs/theme';
 import { AnimatePresence } from 'framer-motion';
 
 function Website({ Component, pageProps, router }) {
-  console.log('theme', theme);
-
   return (
     <ChakraProvider theme={theme}>
       <Fonts />

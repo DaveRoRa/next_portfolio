@@ -24,8 +24,10 @@ const styles = {
   global: (props) => ({
     body: {
       'background-image': mode(
-        'url(/images/danny-lines-TTRNdWfY8TY-unsplash.jpg)',
-        'url(/images/david-werbrouck-R_FPsOWp2r0-unsplash.jpg)'
+        'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),' +
+          ' url(/images/danny-lines-TTRNdWfY8TY-unsplash.jpg)',
+        'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),' +
+          ' url(/images/david-werbrouck-R_FPsOWp2r0-unsplash.jpg)'
       )(props),
       'background-size': 'cover',
       color: mode('blue.800', 'white')(props),

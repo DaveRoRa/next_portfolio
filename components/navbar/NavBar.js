@@ -53,6 +53,9 @@ const NavBar = ({ path, ...rest }) => {
           <LinkItem href='/skills' path={path}>
             {t('skills')}
           </LinkItem>
+          <LinkItem href='/contact' path={path}>
+            {t('contact')}
+          </LinkItem>
         </Stack>
         <Box
           align='right'

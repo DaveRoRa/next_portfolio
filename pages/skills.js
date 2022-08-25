@@ -1,5 +1,6 @@
 import { Container } from '@chakra-ui/react';
 import Trans from 'next-translate/Trans';
+import { StarIcon, PlusSquareIcon } from '@chakra-ui/icons';
 import IconList from '../components/IconList';
 import Article from '../components/layout/Article';
 import useTranslation from '../hooks/useTranslation';
@@ -7,16 +8,6 @@ import L from '../components/ExternalLink';
 import Section from '../components/Section';
 import { useMemo } from 'react';
 import ExternalLink from '../components/ExternalLink';
-
-const psList = [
-  'Dominio Flujo de Trabajo Git',
-  'Conocimientos en Eslint y Prettier',
-  'Inglés comunicacional fluido',
-  'Alta empatía y trabajo en equipo',
-  'Amante de la reutilización y limpieza de código',
-  'Conocimientos en programación de Lenguaje Ensamblador',
-  'Programación en Arduino'
-];
 
 const SkillsPage = () => {
   const { t } = useTranslation('skills');
@@ -91,7 +82,7 @@ const SkillsPage = () => {
       t('plus4'),
       t('plus5'),
       t('plus6'),
-      t('plus7'),
+      t('plus7')
     ],
     [t]
   );
@@ -106,7 +97,7 @@ const SkillsPage = () => {
     <Article title={t('common:skills')}>
       <Container paddingTop={3}>
         <Section>
-          <IconList header={t('masteredTechs')} list={masteredList} />
+          <IconList header={t('masteredTechs')} list={masteredList} icon={StarIcon} />
         </Section>
         <Section delay={0.5}>
           <IconList
@@ -119,10 +110,7 @@ const SkillsPage = () => {
           />
         </Section>
         <Section delay={1}>
-          <IconList
-            header={t('plus')}
-            list={plusList}
-          />
+          <IconList header={t('plus')} list={plusList} icon={PlusSquareIcon} />
         </Section>
       </Container>
     </Article>

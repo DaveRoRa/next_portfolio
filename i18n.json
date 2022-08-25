@@ -4,9 +4,10 @@
   "pages": {
     "*": ["common"],
     "/": ["home"],
-    "/trajectory":["trajectory"],
-    "/trajectory/[work]":["[work]"],
-    "/skills":["skills"],
+    "/trajectory": ["trajectory"],
+    "/trajectory/[work]": ["[work]"],
+    "/skills": ["skills"],
+    "/contact": ["contact"],
     "/404": ["404"]
   }
 }

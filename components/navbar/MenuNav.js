@@ -58,6 +58,9 @@ const MenuNav = ({ path }) => {
           <MenuLink path={path} href='/skills'>
             {t('skills')}
           </MenuLink>
+          <MenuLink path={path} href='/contact'>
+            {t('contact')}
+          </MenuLink>
         </MenuList>
       </Menu>
     </Box>
