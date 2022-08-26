@@ -1,3 +1,13 @@
 {
-  
+  "viaEmail": "Vía Correo Electrónico",
+  "viaSocial": "Vía Redes Sociales",
+  "name": "Nombre",
+  "email": "Correo",
+  "content": "Mensaje",
+  "submit": "Enviar",
+  "fieldRequired": "Campo obligatorio",
+  "errorEmail": "Formato de correo inválido",
+  "min4": "Deben ser 4 caracteres o más",
+  "min10": "Deben ser 10 caracteres o más",
+  "max50": "Deben ser 50 caracteres o menos"
 }

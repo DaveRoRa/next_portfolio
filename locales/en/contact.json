@@ -1,0 +1,13 @@
+{
+  "viaEmail": "Via Email",
+  "viaSocial": "Via Social Media",
+  "name": "Name",
+  "email": "Email",
+  "content": "Message",
+  "submit": "Submit",
+  "fieldRequired": "This field is required",
+  "errorEmail": "Invalid email",
+  "min4": "Must be at least 4 characters",
+  "min10": "Must be at least 10 characters",
+  "max50": "Must be at most 50 characters"
+}

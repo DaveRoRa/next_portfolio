@@ -38,6 +38,13 @@ const styles = {
         '0 0 0 3px rgba(184, 50, 128, 0.6)',
         '0 0 0 3px rgba(255, 255, 255, 0.6)'
       )(props)} !important`
+    },
+    'input:focus-visible': {
+      'box-shadow': `${mode('', '0 0 0 3px rgba(255, 255, 255, 0.6)')(props)} !important`,
+      'border-color': `${mode(
+        '',
+        'rgba(255, 255, 255, 0.6)'
+      )(props)} !important`
     }
   })
 };
