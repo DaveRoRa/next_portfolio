@@ -25,16 +25,18 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 
 export const WorkGridItem = ({ children, id, title, thumbnail }) => (
   <Box
+    transitionDuration='100ms'
     _hover={{
       boxShadow: useColorModeValue('2xl', 'dark-2xl'),
       border: '2px solid',
-      borderColor: useColorModeValue('pink.600', 'whiteAlpha.800'),
+      borderColor: useColorModeValue('pink.600', 'whiteAlpha.800')
     }}
     w='100%'
     p={4}
     height='100%'
     boxShadow={useColorModeValue('lg', 'dark-lg')}
     borderRadius={10}
+    border={useColorModeValue('2px solid #ffedf1', undefined)}
     align='center'>
     <NextLink href={`/trajectory/${id}`} passHref>
       <LinkBox cursor='pointer'>
