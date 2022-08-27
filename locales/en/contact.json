@@ -5,9 +5,16 @@
   "email": "Email",
   "content": "Message",
   "submit": "Submit",
+  "submitting": "Submitting",
   "fieldRequired": "This field is required",
   "errorEmail": "Invalid email",
   "min4": "Must be at least 4 characters",
   "min10": "Must be at least 10 characters",
-  "max50": "Must be at most 50 characters"
+  "max50": "Must be at most 50 characters",
+  "status0": "Could'nt reach the server",
+  "status201": "Message sent successfully, thank you for contacting me, I will reply as soon as possible",
+  "status400": "Request malformed, there may be missing fields",
+  "status503": "Service temporarily unavailable",
+  "success": "Sent",
+  "sendAnother": "Send another"
 }

@@ -23,28 +23,25 @@ const colors = {
 const styles = {
   global: (props) => ({
     body: {
-      'background-image': mode(
+      backgroundImage: mode(
         'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),' +
           ' url(/images/danny-lines-TTRNdWfY8TY-unsplash.jpg)',
         'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),' +
           ' url(/images/david-werbrouck-R_FPsOWp2r0-unsplash.jpg)'
       )(props),
-      'background-size': 'cover',
+      backgroundSize: 'cover',
       color: mode('blue.800', 'white')(props),
-      'background-color': mode('rgba(1,0,135,1)', 'black')(props)
+      backgroundColor: mode('rgba(1,0,135,1)', 'black')(props)
     },
     'a:focus:not(:hover),button:focus:not(:hover)': {
-      'box-shadow': `${mode(
+      boxShadow: `${mode(
         '0 0 0 3px rgba(184, 50, 128, 0.6)',
         '0 0 0 3px rgba(255, 255, 255, 0.6)'
       )(props)} !important`
     },
     'input:focus-visible': {
-      'box-shadow': `${mode('', '0 0 0 3px rgba(255, 255, 255, 0.6)')(props)} !important`,
-      'border-color': `${mode(
-        '',
-        'rgba(255, 255, 255, 0.6)'
-      )(props)} !important`
+      boxShadow: `${mode('', '0 0 0 3px rgba(255, 255, 255, 0.6)')(props)} !important`,
+      borderColor: `${mode('', 'rgba(255, 255, 255, 0.6)')(props)} !important`
     }
   })
 };

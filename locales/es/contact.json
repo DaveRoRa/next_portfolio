@@ -5,9 +5,16 @@
   "email": "Correo",
   "content": "Mensaje",
   "submit": "Enviar",
+  "submitting": "Enviando",
   "fieldRequired": "Campo obligatorio",
   "errorEmail": "Formato de correo inválido",
   "min4": "Deben ser 4 caracteres o más",
   "min10": "Deben ser 10 caracteres o más",
-  "max50": "Deben ser 50 caracteres o menos"
+  "max50": "Deben ser 50 caracteres o menos",
+  "status0": "No se pudo establecer conexión con el servidor",
+  "status201": "Mensaje enviado con éxito, gracias por contactarme, le responderé tan pronto como sea posible",
+  "status400": "Formato de petición incorrecto, pueden faltar datos en el formulario",
+  "status503": "Servicio temporalmente no disponible",
+  "success": "Enviado",
+  "sendAnother": "Enviar otro"
 }

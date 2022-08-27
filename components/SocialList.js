@@ -31,7 +31,7 @@ const SocialList = () => {
       mt={5}
       color={useColorModeValue('pink.600', 'black')}
       fontWeight={500}>
-      <Grid gap={3}>
+      <Grid gap={3} mx={5}>
         <ListContact
           href='https://t.me/boostlearning95'
           network='telegram'
