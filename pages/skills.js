@@ -62,6 +62,14 @@ const SkillsPage = () => {
         components={{
           l1: <L href='https://redux.js.org/' />
         }}
+      />,
+      <Trans
+        key='skm8'
+        i18nKey='skills:mastered8'
+        components={{
+          l1: <L href='https://formik.org/' />,
+          l2: <L href='https://github.com/jquense/yup' />
+        }}
       />
     ],
     [t]

@@ -7,6 +7,7 @@
   "mastered5": "Styles libraries including <l1>Tailwind Css</l1>, <l2>Styled-Components</l2> and <l3>Emotion Styled</l3>.",
   "mastered6": "Communication with APIs based on both REST and <l1>GraphQL</l1> architecture.",
   "mastered7": "Global state management with <l1>Redux</l1>.",
+  "mastered8": "Work with forms and tools associated with them such as <l1>Formik</l1> and <l2>Yup</l2>.",
   "basicKnoledge": "Basic knowledge of:",
   "plus": "Extras:",
   "plus1": "Git Workflow Mastery.",

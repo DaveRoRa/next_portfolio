@@ -29,7 +29,8 @@ const Article = ({ children, title }) => (
         rounded='md'
         backdropFilter='auto'
         backdropBlur={useColorModeValue(undefined, '4px')}
-        bg={useColorModeValue('white', 'blackAlpha.900')}>
+        bg={useColorModeValue('white', 'blackAlpha.900')}
+        mt={3}>
         {children}
       </Box>
       <GridItemStyle />
