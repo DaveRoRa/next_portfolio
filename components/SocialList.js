@@ -1,5 +1,13 @@
 import { memo } from 'react';
-import { Icon, Box, Grid, GridItem, useColorModeValue, Link } from '@chakra-ui/react';
+import {
+  Icon,
+  Box,
+  Grid,
+  GridItem,
+  useColorModeValue,
+  Link,
+  useBreakpointValue
+} from '@chakra-ui/react';
 import { SocialIcon } from 'react-social-icons';
 
 const ColoredIcon = ({ ...props }) => {
@@ -8,7 +16,13 @@ const ColoredIcon = ({ ...props }) => {
 
 const ListContact = ({ href, text, network }) => {
   return (
-    <GridItem>
+    <GridItem
+      display='flex'
+      alignItems='center'
+      flexDir={useBreakpointValue({
+        base: 'column',
+        sm: 'row'
+      })}>
       <Icon as={ColoredIcon} network={network} mr={3} />
       <Link
         textShadow={useColorModeValue(
