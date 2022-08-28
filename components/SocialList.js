@@ -19,11 +19,19 @@ const ListContact = ({ href, text, network }) => {
     <GridItem
       display='flex'
       alignItems='center'
+      justifyItems='center'
       flexDir={useBreakpointValue({
         base: 'column',
         sm: 'row'
       })}>
-      <Icon as={ColoredIcon} network={network} mr={3} />
+      <Icon
+        as={ColoredIcon}
+        network={network}
+        mr={useBreakpointValue({
+          base: undefined,
+          sm: 3
+        })}
+      />
       <Link
         textShadow={useColorModeValue(
           undefined,

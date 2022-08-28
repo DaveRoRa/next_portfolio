@@ -32,7 +32,7 @@ const styles = {
       backgroundSize: 'cover',
       color: mode('blue.800', 'white')(props),
       backgroundColor: mode('rgba(1,0,135,1)', 'black')(props),
-      minWidth: '370px'
+      minWidth: '350px'
     },
     'a:focus:not(:hover),button:focus:not(:hover)': {
       boxShadow: `${mode(
