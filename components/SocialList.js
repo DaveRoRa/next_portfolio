@@ -64,6 +64,11 @@ const SocialList = () => {
           network='whatsapp'
           text='Whatsapp'
         />
+        <ListContact
+          href='https://www.linkedin.com/in/david-rodriguez-ramirez-32a47024a/'
+          network='linkedin'
+          text='LinkedIn'
+        />
       </Grid>
     </Box>
   );
