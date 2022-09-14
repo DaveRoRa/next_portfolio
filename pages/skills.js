@@ -6,7 +6,7 @@ import Article from '../components/layout/Article';
 import useTranslation from '../hooks/useTranslation';
 import L from '../components/ExternalLink';
 import Section from '../components/Section';
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import ExternalLink from '../components/ExternalLink';
 
 const SkillsPage = () => {
@@ -95,11 +95,24 @@ const SkillsPage = () => {
     [t]
   );
 
-  const basicList = [
-    { link: 'https://nextjs.org/', text: 'Next.js' },
-    { link: 'https://strapi.io/', text: 'Strapi' },
-    { link: 'https://expressjs.com/', text: 'Express' }
-  ];
+  const basicList = useMemo(
+    () => [
+      { link: 'https://nextjs.org/', text: 'Next.js' },
+      { link: 'https://strapi.io/', text: 'Strapi' },
+      { link: 'https://expressjs.com/', text: 'Express' },
+      { link: 'https://www.typescriptlang.org/', text: 'Typescript' },
+      <Trans
+        key='basic5'
+        i18nKey='skills:basicTest'
+        components={{
+          l1: <L href='https://jestjs.io/' />,
+          l2: <L href='https://pptr.dev/' />,
+          l3: <L href='https://testing-library.com/docs/react-testing-library/intro/' />
+        }}
+      />
+    ],
+    []
+  );
 
   return (
     <Article title={t('common:skills')}>
@@ -110,11 +123,15 @@ const SkillsPage = () => {
         <Section delay={0.5}>
           <IconList
             header={t('basicKnoledge')}
-            list={basicList.map((item) => (
-              <ExternalLink key={item.text} href={item.link}>
-                {item.text}
-              </ExternalLink>
-            ))}
+            list={basicList.map((item) =>
+              React.isValidElement(item) ? (
+                item
+              ) : (
+                <ExternalLink key={item.text} href={item.link}>
+                  {item.text}
+                </ExternalLink>
+              )
+            )}
           />
         </Section>
         <Section delay={1}>

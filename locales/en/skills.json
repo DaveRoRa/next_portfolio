@@ -9,6 +9,7 @@
   "mastered7": "Global state management with <l1>Redux</l1>.",
   "mastered8": "Work with forms and tools associated with them such as <l1>Formik</l1> and <l2>Yup</l2>.",
   "basicKnoledge": "Basic knowledge of:",
+  "basicTest": "Unit testing based on <l1>Jest</l1> using <l2>Puppeteer</l2> and <l3>React-Testing-Library</l3>",
   "plus": "Extras:",
   "plus1": "Git Workflow Mastery.",
   "plus2": "Knoledge of <l1>Eslint</l1> and <l2>Prettier</l2>.",
